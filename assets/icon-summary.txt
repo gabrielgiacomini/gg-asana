@@ -1,0 +1,11 @@
+**The Four Questions**
+1. Verb: refactor
+2. Object: a robotic arm with a barcode scanner that can move through every shelf in a warehouse and change labels on millions of items simultaneously
+3. Animal: a determined termite colony that systematically tunnels through a massive wooden structure, identifies every piece with the old name written on it, and applies a fresh label — while occasionally bringing back the wrong piece due to a crossed wire in its tiny brain
+4. Most annoying manual task: clicking through a thousand tasks one by one, waiting for each page to load, renaming each one, changing their custom fields, saving, and repeating until your fingers cramp and your will to live dissolves
+
+**The Reality**
+This skill is basically a demolition and renovation crew for your Asana project. It shows up with blueprints, tears apart the structure (discovering what exists), then builds it back differently based on what you actually wanted (mass-editing tasks, restructuring parents, mirroring content to custom fields). It works in two layers: the tool layer tells it how to talk to the Asana API without stepping on rakes (deferred loading, two-server failover, distinct namespaces for task GIDs vs custom-field GIDs), and the operation layer is the actual work — finding every "OldName" in the project, deciding it actually meant "NewName," and applying that change to hundreds of tasks while leaving a paper trail.
+
+**The Superpower and the Mockery**
+It thinks it is a precision surgeon but it is really just a very enthusiastic label maker with a searchlight. It will hunt down every mention of 'OldName' like a bloodhound, replace it with 'NewName', and then proudly present you with a report of its heroic deeds. It has no idea if the replacement makes sense — it just knows the label changed. The cruel irony is that the primary MCP server has the memory of a goldfish — sometimes returning data for the wrong task entirely — so you have to verify every gid matches what you asked for and fall back to the backup server like a desperate parent switching between two malfunctioning GPS units.

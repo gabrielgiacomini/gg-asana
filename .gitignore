@@ -1,0 +1,7 @@
+# gg-asana internal gitignore
+.env
+.env.local
+node_modules/
+.tmp/
+*.log
+.DS_Store

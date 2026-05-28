@@ -1,0 +1,12 @@
+interface:
+  display_name: GG → Asana → Operations
+  short_description: Manage Asana projects via the Asana MCP — discover, mass-edit, restructure, snapshot, and audit.
+  default_prompt: >-
+    Use asana/SKILL.md when the task involves Asana via MCP — listing/discovering projects and
+    tasks, mass-editing notes / names / custom fields, restructuring parents into containers and
+    subsections, snapshotting before destructive ops, auditing alignment against an external spec,
+    designing parallel sub-agent fan-outs across many tasks, or coordinating Asana state with
+    codebase content.
+  brand_color: '#6366f1'
+  icon_large: ./assets/icon-large.png
+  icon_small: ./assets/icon-small.svg

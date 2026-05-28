@@ -1,0 +1,26 @@
+{
+  "name": "asana-scripts",
+  "version": "0.1.0",
+  "description": "Agnostic TypeScript wrappers around the Asana REST API for operations the MCP server does not cover.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "scripts": {
+    "dev:create-section": "tsx --env-file=../.env ./create-section.ts",
+    "dev:list-sections": "tsx --env-file=../.env ./list-sections.ts",
+    "dev:move-tasks": "tsx --env-file=../.env ./move-tasks-to-section.ts",
+    "dev:project-inventory": "tsx --env-file=../.env ./get-project-inventory.ts",
+    "dev:set-deps": "tsx --env-file=../.env ./set-task-dependencies.ts",
+    "dev:list-attachments": "tsx --env-file=../.env ./list-attachments.ts",
+    "dev:upload-attachment": "tsx --env-file=../.env ./upload-attachment.ts",
+    "dev:delete-attachment": "tsx --env-file=../.env ./delete-attachment.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}
